@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+
+ <div style="display:flex;justify-content:center;align-items:center;">
+ <div>
+ <img src="{{ url_for('static', filename='logo.png') }}" class="img-responsive" alt="Placeholder image" style="width:500px; padding: 20px;">
+ </div>
+ </div>
+  
+<div style="display:flex;justify-content:center;align-items:center;">
+    <div class="col-lg-6">
+        <form method="POST" action="/userdata/"> 
+          <input name="my-form" type="submit" class="btn btn-info" value="Submit" style="float: right;">
+          <div style="overflow: hidden; padding-right: .5em;">
+          <input name="url" style="width: 100%;" type="text" class="form-control" placeholder="Enter a song name...">
+          </div>
+
+        </form>
+      </div>
+</div>
+
+
+
+
+
+{% endblock %}

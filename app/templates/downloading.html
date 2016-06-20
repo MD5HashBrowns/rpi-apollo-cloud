@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<script type="text/javascript">
+	setTimeout("top.location.href = '/static/songs/{{ url }}.mp3'",700);
+</script>
+
+
+
+
+
+
+
+<h1 class="apollo">Thanks for using Apollo Cloud!</h1>
+<h3 class="apollo">"{{ url }}" has started downloading</h3>
+
+
+{% endblock %}
+
