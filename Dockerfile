@@ -1,13 +1,10 @@
 ############################################################
-# Dockerfile to build Flask App
-# Based on
+# Dockerfile to build Apollo Cloud on Raspberry Pi (Armv7hf)
 ############################################################
 
 # Set the base image
-FROM resin/rpi-raspbian:latest
+FROM resin/armv7hf-debian
 
-# File Author / Maintainer
-MAINTAINER Carlos Tighe
 
 RUN [ "cross-build-start" ]
 
