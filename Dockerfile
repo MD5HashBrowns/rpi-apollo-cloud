@@ -14,8 +14,9 @@ ENV TZ Europe/Berlin
 
 
 RUN echo "deb http://archive.raspberrypi.org/debian/ jessie main" >> /etc/apt/sources.list.d/raspberrypi.list \
-    && apt-get update \
-    && apt-get install -y apache2 \
+ && apt-get update \
+ && dpkg --configure -a
+ && apt-get install -y apache2 \
     libapache2-mod-wsgi \
     build-essential \
     python \
