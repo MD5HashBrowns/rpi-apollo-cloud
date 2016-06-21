@@ -3,7 +3,7 @@
 ############################################################
 
 # Set the base image
-FROM resin/armv7hf-debian
+FROM jsurf/rpi-raspbian:latest
 
 
 RUN [ "cross-build-start" ]
