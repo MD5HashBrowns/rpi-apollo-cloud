@@ -9,6 +9,10 @@ FROM resin/rpi-raspbian:latest
 # File Author / Maintainer
 MAINTAINER Carlos Tighe
 
+RUN [ "cross-build-start" ]
+
+
+
 RUN apt-get update && apt-get install -y apache2 \
     libapache2-mod-wsgi \
     build-essential \
@@ -48,3 +52,5 @@ CMD  /usr/sbin/apache2ctl -D FOREGROUND
 # The port is only available if you go to another port first
 # ENTRYPOINT ["/sbin/init"]
 # CMD ["/usr/sbin/apache2ctl"]
+
+RUN [ "cross-build-end" ]
