@@ -5,11 +5,11 @@
 # Set the base image
 FROM jsurf/rpi-raspbian:latest
 
-# Runs a a cross build script that allows Docker Hub to build the image
+# Run a a cross build script that allows Docker Hub to build the image
 RUN [ "cross-build-start" ]
 
 
-
+# Use the latest sources.list and install all needed applications
 RUN echo "deb http://archive.raspberrypi.org/debian/ jessie main" >> /etc/apt/sources.list.d/raspberrypi.list \
  && apt-get update \
  && apt-get purge wolfram* \
