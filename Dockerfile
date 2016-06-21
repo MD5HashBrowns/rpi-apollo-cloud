@@ -8,6 +8,9 @@ FROM jsurf/rpi-raspbian:latest
 # Runs a a cross build script that allows Docker Hub to build the image
 RUN [ "cross-build-start" ]
 
+ENV LANG C.UTF-8 
+ENV TZ Europe/Berlin
+
 
 
 RUN echo "deb http://archive.raspberrypi.org/debian/ jessie main" >> /etc/apt/sources.list.d/raspberrypi.list \
