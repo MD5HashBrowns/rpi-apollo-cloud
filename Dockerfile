@@ -5,7 +5,7 @@
 # Set the base image
 FROM jsurf/rpi-raspbian:latest
 
-
+# Runs a a cross build script that allows Docker Hub to build the image
 RUN [ "cross-build-start" ]
 
 
@@ -50,4 +50,5 @@ CMD  /usr/sbin/apache2ctl -D FOREGROUND
 # ENTRYPOINT ["/sbin/init"]
 # CMD ["/usr/sbin/apache2ctl"]
 
+# Ends the cross build script
 RUN [ "cross-build-end" ]
